@@ -268,6 +268,14 @@ public class MorphyToolbar extends FrameLayout {
         lblSubtitle.setVisibility(View.VISIBLE);
     }
 
+    public void setNoLeftMargin(){
+        builder.withContentMarginStart(0);
+    }
+
+    public void setDefaultMargin(){
+        builder.withContentMarginStart((int)getResources().getDimension(R.dimen.mt_toolbar_content_margin_start_collapsed));
+    }
+
     public void setHidePictureWhenCollapsed(boolean value) {
         if (value && collapsed && !builder.hidePictureWhenCollapsed) {
             final ViewGroup.LayoutParams layoutParams = imgPicture.getLayoutParams();
