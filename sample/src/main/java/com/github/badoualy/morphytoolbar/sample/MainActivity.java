@@ -120,4 +120,20 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void hideButton(View view){
+        morphyToolbar.hidePicture();
+    }
+
+    public void showButton(View view){
+        morphyToolbar.showPicture();
+    }
+
+    public void hideSubtitle(View view){
+        morphyToolbar.hideSubtitle();
+    }
+
+    public void showSubtitle(View view){
+        morphyToolbar.showSubtitle();
+    }
 }

@@ -37,6 +37,7 @@ public class MorphyToolbar extends FrameLayout {
     // State fields
     private boolean animating = false;
     private boolean collapsed = true;
+    private boolean pictureHided = false;
 
     private MorphyToolbar(Builder builder) {
         super(builder.activity);
@@ -163,7 +164,8 @@ public class MorphyToolbar extends FrameLayout {
         });
         toolbar.startAnimation(a);
         innerLayout.startAnimation(b);
-        imgPicture.startAnimation(c);
+        if(!pictureHided)
+            imgPicture.startAnimation(c);
     }
 
     public void collapse() {
@@ -202,7 +204,8 @@ public class MorphyToolbar extends FrameLayout {
 
         toolbar.startAnimation(a);
         innerLayout.startAnimation(b);
-        imgPicture.startAnimation(c);
+        if(!pictureHided)
+            imgPicture.startAnimation(c);
     }
 
     public void setAsSupportActionBar() {
@@ -236,6 +239,7 @@ public class MorphyToolbar extends FrameLayout {
         builder.pictureBitmap = bitmap;
         builder.pictureDrawable = null;
         imgPicture.setImageBitmap(bitmap);
+        pictureHided = false;
     }
 
     public void setPicture(Drawable drawable) {
@@ -243,6 +247,25 @@ public class MorphyToolbar extends FrameLayout {
         builder.pictureBitmap = null;
         builder.pictureDrawable = drawable;
         imgPicture.setImageDrawable(drawable);
+        pictureHided = false;
+    }
+
+    public void hidePicture(){
+        imgPicture.setVisibility(View.GONE);
+        pictureHided = true;
+    }
+
+    public void showPicture(){
+        imgPicture.setVisibility(View.VISIBLE);
+        pictureHided = false;
+    }
+
+    public void hideSubtitle(){
+        lblSubtitle.setVisibility(View.GONE);
+    }
+
+    public void showSubtitle(){
+        lblSubtitle.setVisibility(View.VISIBLE);
     }
 
     public void setHidePictureWhenCollapsed(boolean value) {

@@ -36,4 +36,32 @@
         app:layout_anchor="@id/layout_app_bar"
         app:layout_anchorGravity="center_vertical|end|right"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide Button"
+        android:layout_marginTop="200dp"
+        android:onClick="hideButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Button"
+        android:layout_marginTop="250dp"
+        android:onClick="showButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide Subtitle"
+        android:layout_marginTop="300dp"
+        android:onClick="hideSubtitle"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Subtitle"
+        android:layout_marginTop="350dp"
+        android:onClick="showSubtitle"/>
+
 </android.support.design.widget.CoordinatorLayout>
