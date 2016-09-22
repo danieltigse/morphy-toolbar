@@ -78,6 +78,7 @@ public class MorphyToolbar extends FrameLayout {
         toolbarParent.removeViewAt(toolbarIndex);
         addView(toolbar, 0);
 
+        toolbarParent.removeAllViews();
         toolbarParent.addView(this, toolbarIndex);
         getLayoutParams().width = LayoutParams.MATCH_PARENT;
 
