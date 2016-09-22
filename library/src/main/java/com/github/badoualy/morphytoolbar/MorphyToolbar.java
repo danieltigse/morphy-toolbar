@@ -79,7 +79,7 @@ public class MorphyToolbar extends FrameLayout {
         addView(toolbar, 0);
 
         toolbarParent.removeAllViews();
-        toolbarParent.addView(this, toolbarIndex);
+        toolbarParent.addView(this, 0);
         getLayoutParams().width = LayoutParams.MATCH_PARENT;
 
         // Align content at toolbar's bottom
