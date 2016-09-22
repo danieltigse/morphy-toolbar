@@ -3,6 +3,7 @@ package com.github.badoualy.morphytoolbar;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.ColorInt;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -274,6 +276,10 @@ public class MorphyToolbar extends FrameLayout {
 
     public String getSubTitle(){
         return lblSubtitle.getText().toString();
+    }
+
+    public ImageView getImageView(){
+        return getImgPicture();
     }
 
     public void setNoLeftMargin(){
