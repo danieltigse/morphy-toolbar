@@ -46,6 +46,18 @@ public class MainActivity extends AppCompatActivity {
                                      .withHidePictureWhenCollapsed(false)
                                      .build();
 
+        morphyToolbar = MorphyToolbar.builder(this, toolbar)
+                .withToolbarAsSupportActionBar()
+                .withTitle("Work [not so] serious talk")
+                .withPicture(R.drawable.img_profile)
+                .withHidePictureWhenCollapsed(false)
+                .build();
+
+        morphyToolbar = MorphyToolbar.builder(this, toolbar)
+                .withToolbarAsSupportActionBar()
+                .withTitle("Work [not so] serious talk")
+                .build();
+
         morphyToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

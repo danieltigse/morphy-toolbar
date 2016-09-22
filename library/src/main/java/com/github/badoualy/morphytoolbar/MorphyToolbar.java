@@ -74,10 +74,10 @@ public class MorphyToolbar extends FrameLayout {
         }
 
         final ViewGroup toolbarParent = (ViewGroup) toolbar.getParent();
+        toolbarParent.removeAllViews();
         int toolbarIndex = toolbarParent.indexOfChild(toolbar);
-        toolbarParent.removeViewAt(toolbarIndex);
+        //toolbarParent.removeViewAt(toolbarIndex);
 
-        removeActualToolbar();
         addView(toolbar, 0);
 
         toolbarParent.addView(this, toolbarIndex);
@@ -87,12 +87,6 @@ public class MorphyToolbar extends FrameLayout {
         final LayoutParams layoutParams = (LayoutParams) innerLayout.getLayoutParams();
         layoutParams.gravity = Gravity.BOTTOM;
         innerLayout.requestLayout();
-    }
-
-    public void removeActualToolbar(){
-        int toolbarIndex = indexOfChild(toolbar);
-        if(toolbarIndex > -1)
-            removeViewAt(toolbarIndex);
     }
 
     private void init() {
