@@ -268,6 +268,14 @@ public class MorphyToolbar extends FrameLayout {
         lblSubtitle.setVisibility(View.VISIBLE);
     }
 
+    public String getTitle(){
+        return lblTitle.getText().toString();
+    }
+
+    public String getSubTitle(){
+        return lblSubtitle.getText().toString();
+    }
+
     public void setNoLeftMargin(){
         builder.withContentMarginStart(0);
     }
